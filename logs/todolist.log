@@ -1,0 +1,1323 @@
+2025-01-07T15:32:10.682+07:00  INFO 7976 --- [todolist] [main] c.t.todolist.TodolistApplication         : Starting TodolistApplication using Java 21.0.5 with PID 7976 (D:\Koding\Worksheet\todolist\target\classes started by rezza in D:\Koding\Worksheet\todolist)
+2025-01-07T15:32:10.683+07:00  INFO 7976 --- [todolist] [main] c.t.todolist.TodolistApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-01-07T15:32:11.291+07:00  INFO 7976 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-07T15:32:11.350+07:00  INFO 7976 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 51 ms. Found 1 JPA repository interface.
+2025-01-07T15:32:11.858+07:00  INFO 7976 --- [todolist] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-07T15:32:11.869+07:00  INFO 7976 --- [todolist] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-07T15:32:11.869+07:00  INFO 7976 --- [todolist] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-01-07T15:32:11.910+07:00  INFO 7976 --- [todolist] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-07T15:32:11.911+07:00  INFO 7976 --- [todolist] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1185 ms
+2025-01-07T15:32:12.048+07:00  INFO 7976 --- [todolist] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-07T15:32:12.103+07:00  INFO 7976 --- [todolist] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-01-07T15:32:12.143+07:00  INFO 7976 --- [todolist] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-07T15:32:12.370+07:00  INFO 7976 --- [todolist] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-07T15:32:12.393+07:00  INFO 7976 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-07T15:32:13.666+07:00  WARN 7976 --- [todolist] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 3D000
+2025-01-07T15:32:13.667+07:00 ERROR 7976 --- [todolist] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : FATAL: database "todolistdb" does not exist
+2025-01-07T15:32:13.668+07:00  WARN 7976 --- [todolist] [main] o.h.e.j.e.i.JdbcEnvironmentInitiator     : HHH000342: Could not obtain connection to query metadata
+
+org.hibernate.exception.GenericJDBCException: unable to obtain isolated JDBC connection [FATAL: database "todolistdb" does not exist] [n/a]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:63) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:116) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.getJdbcEnvironmentUsingJdbcMetadata(JdbcEnvironmentInitiator.java:320) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:129) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator.initiateService(JdbcEnvironmentInitiator.java:81) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.boot.registry.internal.StandardServiceRegistryImpl.initiateService(StandardServiceRegistryImpl.java:130) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.createService(AbstractServiceRegistryImpl.java:263) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.initializeService(AbstractServiceRegistryImpl.java:238) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.service.internal.AbstractServiceRegistryImpl.getService(AbstractServiceRegistryImpl.java:215) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.boot.model.relational.Database.<init>(Database.java:45) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.getDatabase(InFlightMetadataCollectorImpl.java:226) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.boot.internal.InFlightMetadataCollectorImpl.<init>(InFlightMetadataCollectorImpl.java:194) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.boot.model.process.spi.MetadataBuildingProcess.complete(MetadataBuildingProcess.java:171) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.metadata(EntityManagerFactoryBuilderImpl.java:1431) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1502) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.1.jar:6.2.1]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.1.jar:6.2.1]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.1.jar:6.2.1]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.1.jar:6.2.1]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.1.jar:3.4.1]
+	at com.takehometest.todolist.TodolistApplication.main(TodolistApplication.java:10) ~[classes/:na]
+Caused by: org.postgresql.util.PSQLException: FATAL: database "todolistdb" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2733) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2845) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:176) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:323) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.Driver.makeConnection(Driver.java:446) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.Driver.connect(Driver.java:298) ~[postgresql-42.7.4.jar:42.7.4]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-5.1.0.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:467) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.JdbcIsolationDelegate.delegateWork(JdbcIsolationDelegate.java:61) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	... 35 common frames omitted
+
+2025-01-07T15:32:13.684+07:00  WARN 7976 --- [todolist] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-07T15:32:13.691+07:00  INFO 7976 --- [todolist] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (null)']
+	Database driver: undefined/unknown
+	Database version: 12.0
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-07T15:32:14.205+07:00  INFO 7976 --- [todolist] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-07T15:32:14.215+07:00  INFO 7976 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-07T15:32:15.239+07:00  WARN 7976 --- [todolist] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 0, SQLState: 3D000
+2025-01-07T15:32:15.240+07:00 ERROR 7976 --- [todolist] [main] o.h.engine.jdbc.spi.SqlExceptionHelper   : FATAL: database "todolistdb" does not exist
+2025-01-07T15:32:15.247+07:00 ERROR 7976 --- [todolist] [main] j.LocalContainerEntityManagerFactoryBean : Failed to initialize JPA EntityManagerFactory: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution [FATAL: database "todolistdb" does not exist] [n/a]
+2025-01-07T15:32:15.248+07:00  WARN 7976 --- [todolist] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution [FATAL: database "todolistdb" does not exist] [n/a]
+2025-01-07T15:32:15.250+07:00  INFO 7976 --- [todolist] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-01-07T15:32:15.263+07:00  INFO 7976 --- [todolist] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-01-07T15:32:15.287+07:00 ERROR 7976 --- [todolist] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution [FATAL: database "todolistdb" does not exist] [n/a]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1808) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.1.jar:3.4.1]
+	at com.takehometest.todolist.TodolistApplication.main(TodolistApplication.java:10) ~[classes/:na]
+Caused by: jakarta.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution [FATAL: database "todolistdb" does not exist] [n/a]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:431) ~[spring-orm-6.2.1.jar:6.2.1]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.1.jar:6.2.1]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-6.2.1.jar:6.2.1]
+	... 15 common frames omitted
+Caused by: org.hibernate.exception.GenericJDBCException: Unable to open JDBC Connection for DDL execution [FATAL: database "todolistdb" does not exist] [n/a]
+	at org.hibernate.exception.internal.StandardSQLExceptionConverter.convert(StandardSQLExceptionConverter.java:63) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:108) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.engine.jdbc.spi.SqlExceptionHelper.convert(SqlExceptionHelper.java:94) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:74) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:39) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.tool.schema.internal.exec.ImprovedExtractionContextImpl.getJdbcConnection(ImprovedExtractionContextImpl.java:63) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.tool.schema.extract.spi.ExtractionContext.getQueryResults(ExtractionContext.java:43) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.tool.schema.extract.internal.SequenceInformationExtractorLegacyImpl.extractMetadata(SequenceInformationExtractorLegacyImpl.java:39) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.initializeSequences(DatabaseInformationImpl.java:66) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.tool.schema.extract.internal.DatabaseInformationImpl.<init>(DatabaseInformationImpl.java:60) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.tool.schema.internal.Helper.buildDatabaseInformation(Helper.java:185) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:93) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:280) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1506) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.1.jar:6.2.1]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.1.jar:6.2.1]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.1.jar:6.2.1]
+	... 19 common frames omitted
+Caused by: org.postgresql.util.PSQLException: FATAL: database "todolistdb" does not exist
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2733) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.readStartupMessages(QueryExecutorImpl.java:2845) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.<init>(QueryExecutorImpl.java:176) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:323) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.Driver.makeConnection(Driver.java:446) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.Driver.connect(Driver.java:298) ~[postgresql-42.7.4.jar:42.7.4]
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:137) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:360) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:202) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:461) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.checkFailFast(HikariPool.java:550) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariPool.<init>(HikariPool.java:98) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.HikariDataSource.getConnection(HikariDataSource.java:111) ~[HikariCP-5.1.0.jar:na]
+	at org.hibernate.engine.jdbc.connections.internal.DatasourceConnectionProviderImpl.getConnection(DatasourceConnectionProviderImpl.java:126) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess.obtainConnection(JdbcEnvironmentInitiator.java:467) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.resource.transaction.backend.jdbc.internal.DdlTransactionIsolatorNonJtaImpl.getIsolatedConnection(DdlTransactionIsolatorNonJtaImpl.java:46) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	... 39 common frames omitted
+
+2025-01-07T15:33:29.072+07:00  INFO 10932 --- [todolist] [main] c.t.todolist.TodolistApplication         : Starting TodolistApplication using Java 21.0.5 with PID 10932 (D:\Koding\Worksheet\todolist\target\classes started by rezza in D:\Koding\Worksheet\todolist)
+2025-01-07T15:33:29.074+07:00  INFO 10932 --- [todolist] [main] c.t.todolist.TodolistApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-01-07T15:33:29.627+07:00  INFO 10932 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-07T15:33:29.674+07:00  INFO 10932 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 1 JPA repository interface.
+2025-01-07T15:33:30.166+07:00  INFO 10932 --- [todolist] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-07T15:33:30.178+07:00  INFO 10932 --- [todolist] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-07T15:33:30.179+07:00  INFO 10932 --- [todolist] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-01-07T15:33:30.234+07:00  INFO 10932 --- [todolist] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-07T15:33:30.234+07:00  INFO 10932 --- [todolist] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1119 ms
+2025-01-07T15:33:30.381+07:00  INFO 10932 --- [todolist] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-07T15:33:30.423+07:00  INFO 10932 --- [todolist] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-01-07T15:33:30.447+07:00  INFO 10932 --- [todolist] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-07T15:33:30.666+07:00  INFO 10932 --- [todolist] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-07T15:33:30.689+07:00  INFO 10932 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-07T15:33:30.840+07:00  INFO 10932 --- [todolist] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@376af784
+2025-01-07T15:33:30.841+07:00  INFO 10932 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-07T15:33:30.883+07:00  WARN 10932 --- [todolist] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-07T15:33:30.908+07:00  INFO 10932 --- [todolist] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-07T15:33:31.510+07:00  INFO 10932 --- [todolist] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-07T15:33:31.551+07:00 DEBUG 10932 --- [todolist] [main] org.hibernate.SQL                        : create table user (id bigint generated by default as identity, email varchar(255), password varchar(255), username varchar(255), primary key (id))
+2025-01-07T15:33:31.557+07:00  WARN 10932 --- [todolist] [main] o.h.t.s.i.ExceptionHandlerLoggedImpl     : GenerationTarget encountered exception accepting command : Error executing DDL "create table user (id bigint generated by default as identity, email varchar(255), password varchar(255), username varchar(255), primary key (id))" via JDBC [ERROR: syntax error at or near "user"
+  Position: 14]
+
+org.hibernate.tool.schema.spi.CommandAcceptanceException: Error executing DDL "create table user (id bigint generated by default as identity, email varchar(255), password varchar(255), username varchar(255), primary key (id))" via JDBC [ERROR: syntax error at or near "user"
+  Position: 14]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:94) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlString(AbstractSchemaMigrator.java:576) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.applySqlStrings(AbstractSchemaMigrator.java:516) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.createTable(AbstractSchemaMigrator.java:316) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.tool.schema.internal.GroupedSchemaMigratorImpl.performTablesMigration(GroupedSchemaMigratorImpl.java:80) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.performMigration(AbstractSchemaMigrator.java:233) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.tool.schema.internal.AbstractSchemaMigrator.doMigration(AbstractSchemaMigrator.java:112) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:280) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$5(SchemaManagementToolCoordinator.java:144) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429) ~[na:na]
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:141) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:37) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:35) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:324) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:463) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1506) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:66) ~[spring-orm-6.2.1.jar:6.2.1]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:390) ~[spring-orm-6.2.1.jar:6.2.1]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:419) ~[spring-orm-6.2.1.jar:6.2.1]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:400) ~[spring-orm-6.2.1.jar:6.2.1]
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:366) ~[spring-orm-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:601) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:204) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:970) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.1.jar:3.4.1]
+	at com.takehometest.todolist.TodolistApplication.main(TodolistApplication.java:10) ~[classes/:na]
+Caused by: org.postgresql.util.PSQLException: ERROR: syntax error at or near "user"
+  Position: 14
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2733) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2420) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:372) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:517) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:434) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:356) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:341) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:317) ~[postgresql-42.7.4.jar:42.7.4]
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:312) ~[postgresql-42.7.4.jar:42.7.4]
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:94) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java) ~[HikariCP-5.1.0.jar:na]
+	at org.hibernate.tool.schema.internal.exec.GenerationTargetToDatabase.accept(GenerationTargetToDatabase.java:80) ~[hibernate-core-6.6.4.Final.jar:6.6.4.Final]
+	... 37 common frames omitted
+
+2025-01-07T15:33:31.561+07:00  INFO 10932 --- [todolist] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-07T15:33:31.876+07:00  WARN 10932 --- [todolist] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController': Unsatisfied dependency expressed through field 'authService': Error creating bean with name 'authService': Unsatisfied dependency expressed through field 'passwordEncoder': No qualifying bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2025-01-07T15:33:31.876+07:00  INFO 10932 --- [todolist] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-07T15:33:31.878+07:00  INFO 10932 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-07T15:33:31.882+07:00  INFO 10932 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-07T15:33:31.885+07:00  INFO 10932 --- [todolist] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-01-07T15:33:31.894+07:00  INFO 10932 --- [todolist] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-01-07T15:33:31.914+07:00 ERROR 10932 --- [todolist] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field passwordEncoder in com.takehometest.todolist.service.AuthService required a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' in your configuration.
+
+2025-01-07T15:39:10.086+07:00  INFO 13436 --- [todolist] [main] c.t.todolist.TodolistApplication         : Starting TodolistApplication using Java 21.0.5 with PID 13436 (D:\Koding\Worksheet\todolist\target\classes started by rezza in D:\Koding\Worksheet\todolist)
+2025-01-07T15:39:10.089+07:00  INFO 13436 --- [todolist] [main] c.t.todolist.TodolistApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-01-07T15:39:10.684+07:00  INFO 13436 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-07T15:39:10.738+07:00  INFO 13436 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 1 JPA repository interface.
+2025-01-07T15:39:11.204+07:00  INFO 13436 --- [todolist] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-07T15:39:11.215+07:00  INFO 13436 --- [todolist] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-07T15:39:11.215+07:00  INFO 13436 --- [todolist] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-01-07T15:39:11.253+07:00  INFO 13436 --- [todolist] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-07T15:39:11.253+07:00  INFO 13436 --- [todolist] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1120 ms
+2025-01-07T15:39:11.374+07:00  INFO 13436 --- [todolist] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-07T15:39:11.421+07:00  INFO 13436 --- [todolist] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-01-07T15:39:11.445+07:00  INFO 13436 --- [todolist] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-07T15:39:11.657+07:00  INFO 13436 --- [todolist] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-07T15:39:11.678+07:00  INFO 13436 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-07T15:39:11.950+07:00  INFO 13436 --- [todolist] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1322b575
+2025-01-07T15:39:11.951+07:00  INFO 13436 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-07T15:39:11.976+07:00  WARN 13436 --- [todolist] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-07T15:39:11.991+07:00  INFO 13436 --- [todolist] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-07T15:39:12.627+07:00  INFO 13436 --- [todolist] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-07T15:39:12.666+07:00 DEBUG 13436 --- [todolist] [main] org.hibernate.SQL                        : create table user_app (id bigint generated by default as identity, email varchar(255), password varchar(255), username varchar(255), primary key (id))
+2025-01-07T15:39:12.681+07:00  INFO 13436 --- [todolist] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-07T15:39:12.963+07:00  WARN 13436 --- [todolist] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController': Unsatisfied dependency expressed through field 'authService': Error creating bean with name 'authService': Unsatisfied dependency expressed through field 'passwordEncoder': No qualifying bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2025-01-07T15:39:12.963+07:00  INFO 13436 --- [todolist] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-07T15:39:12.965+07:00  INFO 13436 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-07T15:39:12.969+07:00  INFO 13436 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-07T15:39:12.974+07:00  INFO 13436 --- [todolist] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-01-07T15:39:12.988+07:00  INFO 13436 --- [todolist] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-01-07T15:39:13.005+07:00 ERROR 13436 --- [todolist] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field passwordEncoder in com.takehometest.todolist.service.AuthService required a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' in your configuration.
+
+2025-01-07T15:42:14.589+07:00  INFO 11932 --- [todolist] [main] c.t.todolist.TodolistApplication         : Starting TodolistApplication using Java 21.0.5 with PID 11932 (D:\Koding\Worksheet\todolist\target\classes started by rezza in D:\Koding\Worksheet\todolist)
+2025-01-07T15:42:14.591+07:00  INFO 11932 --- [todolist] [main] c.t.todolist.TodolistApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-01-07T15:42:15.191+07:00  INFO 11932 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-07T15:42:15.242+07:00  INFO 11932 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 1 JPA repository interface.
+2025-01-07T15:42:15.723+07:00  INFO 11932 --- [todolist] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-07T15:42:15.735+07:00  INFO 11932 --- [todolist] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-07T15:42:15.735+07:00  INFO 11932 --- [todolist] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-01-07T15:42:15.776+07:00  INFO 11932 --- [todolist] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-07T15:42:15.777+07:00  INFO 11932 --- [todolist] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1142 ms
+2025-01-07T15:42:15.906+07:00  INFO 11932 --- [todolist] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-07T15:42:15.950+07:00  INFO 11932 --- [todolist] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-01-07T15:42:15.976+07:00  INFO 11932 --- [todolist] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-07T15:42:16.191+07:00  INFO 11932 --- [todolist] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-07T15:42:16.212+07:00  INFO 11932 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-07T15:42:16.340+07:00  INFO 11932 --- [todolist] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2ae5bd34
+2025-01-07T15:42:16.342+07:00  INFO 11932 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-07T15:42:16.369+07:00  WARN 11932 --- [todolist] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-07T15:42:16.384+07:00  INFO 11932 --- [todolist] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-07T15:42:16.994+07:00  INFO 11932 --- [todolist] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-07T15:42:17.034+07:00  INFO 11932 --- [todolist] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-07T15:42:17.298+07:00  WARN 11932 --- [todolist] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController': Unsatisfied dependency expressed through field 'authService': Error creating bean with name 'authService': Unsatisfied dependency expressed through field 'passwordEncoder': No qualifying bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2025-01-07T15:42:17.299+07:00  INFO 11932 --- [todolist] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-07T15:42:17.302+07:00  INFO 11932 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-07T15:42:17.340+07:00  INFO 11932 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-07T15:42:17.361+07:00  INFO 11932 --- [todolist] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-01-07T15:42:17.370+07:00  INFO 11932 --- [todolist] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-01-07T15:42:17.385+07:00 ERROR 11932 --- [todolist] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field passwordEncoder in com.takehometest.todolist.service.AuthService required a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' in your configuration.
+
+2025-01-07T15:43:41.244+07:00  INFO 7484 --- [todolist] [main] c.t.todolist.TodolistApplication         : Starting TodolistApplication using Java 21.0.5 with PID 7484 (D:\Koding\Worksheet\todolist\target\classes started by rezza in D:\Koding\Worksheet\todolist)
+2025-01-07T15:43:41.247+07:00  INFO 7484 --- [todolist] [main] c.t.todolist.TodolistApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-01-07T15:43:41.799+07:00  INFO 7484 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-07T15:43:41.850+07:00  INFO 7484 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 43 ms. Found 1 JPA repository interface.
+2025-01-07T15:43:42.320+07:00  INFO 7484 --- [todolist] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-07T15:43:42.332+07:00  INFO 7484 --- [todolist] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-07T15:43:42.332+07:00  INFO 7484 --- [todolist] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-01-07T15:43:42.374+07:00  INFO 7484 --- [todolist] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-07T15:43:42.375+07:00  INFO 7484 --- [todolist] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1087 ms
+2025-01-07T15:43:42.521+07:00  INFO 7484 --- [todolist] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-07T15:43:42.570+07:00  INFO 7484 --- [todolist] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-01-07T15:43:42.599+07:00  INFO 7484 --- [todolist] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-07T15:43:42.812+07:00  INFO 7484 --- [todolist] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-07T15:43:42.834+07:00  INFO 7484 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-07T15:43:42.978+07:00  INFO 7484 --- [todolist] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@66298fe9
+2025-01-07T15:43:42.979+07:00  INFO 7484 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-07T15:43:43.012+07:00  WARN 7484 --- [todolist] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-07T15:43:43.031+07:00  INFO 7484 --- [todolist] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-07T15:43:43.608+07:00  INFO 7484 --- [todolist] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-07T15:43:43.652+07:00  INFO 7484 --- [todolist] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-07T15:43:43.931+07:00  WARN 7484 --- [todolist] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController': Unsatisfied dependency expressed through field 'authService': Error creating bean with name 'authService': Unsatisfied dependency expressed through field 'passwordEncoder': No qualifying bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2025-01-07T15:43:43.931+07:00  INFO 7484 --- [todolist] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-07T15:43:43.933+07:00  INFO 7484 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-07T15:43:43.954+07:00  INFO 7484 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-07T15:43:43.957+07:00  INFO 7484 --- [todolist] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-01-07T15:43:43.968+07:00  INFO 7484 --- [todolist] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-01-07T15:43:43.986+07:00 ERROR 7484 --- [todolist] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field passwordEncoder in com.takehometest.todolist.service.AuthService required a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' in your configuration.
+
+2025-01-07T15:44:56.038+07:00  INFO 4560 --- [todolist] [main] c.t.todolist.TodolistApplication         : Starting TodolistApplication using Java 21.0.5 with PID 4560 (D:\Koding\Worksheet\todolist\target\classes started by rezza in D:\Koding\Worksheet\todolist)
+2025-01-07T15:44:56.040+07:00  INFO 4560 --- [todolist] [main] c.t.todolist.TodolistApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-01-07T15:44:56.586+07:00  INFO 4560 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-07T15:44:56.631+07:00  INFO 4560 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 1 JPA repository interface.
+2025-01-07T15:44:57.110+07:00  INFO 4560 --- [todolist] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-07T15:44:57.121+07:00  INFO 4560 --- [todolist] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-07T15:44:57.121+07:00  INFO 4560 --- [todolist] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-01-07T15:44:57.163+07:00  INFO 4560 --- [todolist] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-07T15:44:57.163+07:00  INFO 4560 --- [todolist] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1083 ms
+2025-01-07T15:44:57.313+07:00  INFO 4560 --- [todolist] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-07T15:44:57.367+07:00  INFO 4560 --- [todolist] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-01-07T15:44:57.394+07:00  INFO 4560 --- [todolist] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-07T15:44:57.621+07:00  INFO 4560 --- [todolist] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-07T15:44:57.644+07:00  INFO 4560 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-07T15:44:57.782+07:00  INFO 4560 --- [todolist] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@322b09da
+2025-01-07T15:44:57.784+07:00  INFO 4560 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-07T15:44:57.808+07:00  WARN 4560 --- [todolist] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-07T15:44:57.822+07:00  INFO 4560 --- [todolist] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-07T15:44:58.455+07:00  INFO 4560 --- [todolist] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-07T15:44:58.501+07:00  INFO 4560 --- [todolist] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-07T15:44:58.744+07:00  WARN 4560 --- [todolist] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController': Unsatisfied dependency expressed through field 'authService': Error creating bean with name 'authService': Unsatisfied dependency expressed through field 'passwordEncoder': No qualifying bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2025-01-07T15:44:58.744+07:00  INFO 4560 --- [todolist] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-07T15:44:58.746+07:00  INFO 4560 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-07T15:44:58.751+07:00  INFO 4560 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-07T15:44:58.753+07:00  INFO 4560 --- [todolist] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-01-07T15:44:58.764+07:00  INFO 4560 --- [todolist] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-01-07T15:44:58.781+07:00 ERROR 4560 --- [todolist] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field passwordEncoder in com.takehometest.todolist.service.AuthService required a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' in your configuration.
+
+2025-01-07T15:46:12.189+07:00  INFO 15420 --- [todolist] [main] c.t.todolist.TodolistApplication         : Starting TodolistApplication using Java 21.0.5 with PID 15420 (D:\Koding\Worksheet\todolist\target\classes started by rezza in D:\Koding\Worksheet\todolist)
+2025-01-07T15:46:12.191+07:00  INFO 15420 --- [todolist] [main] c.t.todolist.TodolistApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-01-07T15:46:12.824+07:00  INFO 15420 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-07T15:46:12.875+07:00  INFO 15420 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 1 JPA repository interface.
+2025-01-07T15:46:13.402+07:00  INFO 15420 --- [todolist] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-07T15:46:13.413+07:00  INFO 15420 --- [todolist] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-07T15:46:13.414+07:00  INFO 15420 --- [todolist] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-01-07T15:46:13.452+07:00  INFO 15420 --- [todolist] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-07T15:46:13.453+07:00  INFO 15420 --- [todolist] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1222 ms
+2025-01-07T15:46:13.590+07:00  INFO 15420 --- [todolist] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-07T15:46:13.638+07:00  INFO 15420 --- [todolist] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-01-07T15:46:13.664+07:00  INFO 15420 --- [todolist] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-07T15:46:13.889+07:00  INFO 15420 --- [todolist] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-07T15:46:13.913+07:00  INFO 15420 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-07T15:46:14.054+07:00  INFO 15420 --- [todolist] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3be80ece
+2025-01-07T15:46:14.055+07:00  INFO 15420 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-07T15:46:14.082+07:00  WARN 15420 --- [todolist] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-07T15:46:14.098+07:00  INFO 15420 --- [todolist] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-07T15:46:14.744+07:00  INFO 15420 --- [todolist] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-07T15:46:14.786+07:00  INFO 15420 --- [todolist] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-07T15:46:15.066+07:00  WARN 15420 --- [todolist] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController': Unsatisfied dependency expressed through field 'authService': Error creating bean with name 'authService': Unsatisfied dependency expressed through field 'passwordEncoder': No qualifying bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2025-01-07T15:46:15.066+07:00  INFO 15420 --- [todolist] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-07T15:46:15.068+07:00  INFO 15420 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-07T15:46:15.072+07:00  INFO 15420 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-07T15:46:15.075+07:00  INFO 15420 --- [todolist] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-01-07T15:46:15.087+07:00  INFO 15420 --- [todolist] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-01-07T15:46:15.107+07:00 ERROR 15420 --- [todolist] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field passwordEncoder in com.takehometest.todolist.service.AuthService required a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' in your configuration.
+
+2025-01-07T15:46:58.231+07:00  INFO 17056 --- [todolist] [main] c.t.todolist.TodolistApplication         : Starting TodolistApplication using Java 21.0.5 with PID 17056 (D:\Koding\Worksheet\todolist\target\classes started by rezza in D:\Koding\Worksheet\todolist)
+2025-01-07T15:46:58.233+07:00  INFO 17056 --- [todolist] [main] c.t.todolist.TodolistApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-01-07T15:46:58.811+07:00  INFO 17056 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-07T15:46:58.869+07:00  INFO 17056 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 1 JPA repository interface.
+2025-01-07T15:46:59.358+07:00  INFO 17056 --- [todolist] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-07T15:46:59.370+07:00  INFO 17056 --- [todolist] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-07T15:46:59.370+07:00  INFO 17056 --- [todolist] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-01-07T15:46:59.413+07:00  INFO 17056 --- [todolist] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-07T15:46:59.414+07:00  INFO 17056 --- [todolist] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1139 ms
+2025-01-07T15:46:59.545+07:00  INFO 17056 --- [todolist] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-07T15:46:59.597+07:00  INFO 17056 --- [todolist] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-01-07T15:46:59.629+07:00  INFO 17056 --- [todolist] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-07T15:46:59.834+07:00  INFO 17056 --- [todolist] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-07T15:46:59.857+07:00  INFO 17056 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-07T15:46:59.997+07:00  INFO 17056 --- [todolist] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@64b73e0a
+2025-01-07T15:46:59.998+07:00  INFO 17056 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-07T15:47:00.030+07:00  WARN 17056 --- [todolist] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-07T15:47:00.049+07:00  INFO 17056 --- [todolist] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-07T15:47:00.641+07:00  INFO 17056 --- [todolist] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-07T15:47:00.680+07:00  INFO 17056 --- [todolist] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-07T15:47:00.949+07:00  WARN 17056 --- [todolist] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController': Unsatisfied dependency expressed through field 'authService': Error creating bean with name 'authService': Unsatisfied dependency expressed through field 'passwordEncoder': No qualifying bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2025-01-07T15:47:00.950+07:00  INFO 17056 --- [todolist] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-07T15:47:00.952+07:00  INFO 17056 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-07T15:47:00.955+07:00  INFO 17056 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-07T15:47:00.960+07:00  INFO 17056 --- [todolist] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-01-07T15:47:00.971+07:00  INFO 17056 --- [todolist] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-01-07T15:47:00.988+07:00 ERROR 17056 --- [todolist] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field passwordEncoder in com.takehometest.todolist.service.AuthService required a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' in your configuration.
+
+2025-01-07T15:47:39.674+07:00  INFO 9376 --- [todolist] [main] c.t.todolist.TodolistApplication         : Starting TodolistApplication using Java 21.0.5 with PID 9376 (D:\Koding\Worksheet\todolist\target\classes started by rezza in D:\Koding\Worksheet\todolist)
+2025-01-07T15:47:39.677+07:00  INFO 9376 --- [todolist] [main] c.t.todolist.TodolistApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-01-07T15:47:40.247+07:00  INFO 9376 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-07T15:47:40.296+07:00  INFO 9376 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 1 JPA repository interface.
+2025-01-07T15:47:40.771+07:00  INFO 9376 --- [todolist] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-07T15:47:40.781+07:00  INFO 9376 --- [todolist] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-07T15:47:40.781+07:00  INFO 9376 --- [todolist] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-01-07T15:47:40.820+07:00  INFO 9376 --- [todolist] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-07T15:47:40.820+07:00  INFO 9376 --- [todolist] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1099 ms
+2025-01-07T15:47:40.951+07:00  INFO 9376 --- [todolist] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-07T15:47:40.992+07:00  INFO 9376 --- [todolist] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-01-07T15:47:41.018+07:00  INFO 9376 --- [todolist] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-07T15:47:41.223+07:00  INFO 9376 --- [todolist] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-07T15:47:41.248+07:00  INFO 9376 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-07T15:47:41.501+07:00  INFO 9376 --- [todolist] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1322b575
+2025-01-07T15:47:41.502+07:00  INFO 9376 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-07T15:47:41.528+07:00  WARN 9376 --- [todolist] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-07T15:47:41.542+07:00  INFO 9376 --- [todolist] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-07T15:47:42.139+07:00  INFO 9376 --- [todolist] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-07T15:47:42.181+07:00  INFO 9376 --- [todolist] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-07T15:47:42.419+07:00  WARN 9376 --- [todolist] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController': Unsatisfied dependency expressed through field 'authService': Error creating bean with name 'authService': Unsatisfied dependency expressed through field 'passwordEncoder': No qualifying bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2025-01-07T15:47:42.420+07:00  INFO 9376 --- [todolist] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-07T15:47:42.422+07:00  INFO 9376 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-07T15:47:42.426+07:00  INFO 9376 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-07T15:47:42.428+07:00  INFO 9376 --- [todolist] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-01-07T15:47:42.437+07:00  INFO 9376 --- [todolist] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-01-07T15:47:42.456+07:00 ERROR 9376 --- [todolist] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field passwordEncoder in com.takehometest.todolist.service.AuthService required a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' in your configuration.
+
+2025-01-07T15:48:53.540+07:00  INFO 12500 --- [todolist] [main] c.t.todolist.TodolistApplication         : Starting TodolistApplication using Java 21.0.5 with PID 12500 (D:\Koding\Worksheet\todolist\target\classes started by rezza in D:\Koding\Worksheet\todolist)
+2025-01-07T15:48:53.542+07:00  INFO 12500 --- [todolist] [main] c.t.todolist.TodolistApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-01-07T15:48:54.115+07:00  INFO 12500 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-07T15:48:54.164+07:00  INFO 12500 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 1 JPA repository interface.
+2025-01-07T15:48:54.632+07:00  INFO 12500 --- [todolist] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-07T15:48:54.650+07:00  INFO 12500 --- [todolist] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-07T15:48:54.650+07:00  INFO 12500 --- [todolist] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-01-07T15:48:54.701+07:00  INFO 12500 --- [todolist] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-07T15:48:54.701+07:00  INFO 12500 --- [todolist] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1117 ms
+2025-01-07T15:48:54.822+07:00  INFO 12500 --- [todolist] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-07T15:48:54.866+07:00  INFO 12500 --- [todolist] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-01-07T15:48:54.891+07:00  INFO 12500 --- [todolist] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-07T15:48:55.100+07:00  INFO 12500 --- [todolist] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-07T15:48:55.120+07:00  INFO 12500 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-07T15:48:55.371+07:00  INFO 12500 --- [todolist] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1a17dd6f
+2025-01-07T15:48:55.372+07:00  INFO 12500 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-07T15:48:55.400+07:00  WARN 12500 --- [todolist] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-07T15:48:55.413+07:00  INFO 12500 --- [todolist] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-07T15:48:55.970+07:00  INFO 12500 --- [todolist] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-07T15:48:56.007+07:00  INFO 12500 --- [todolist] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-07T15:48:56.257+07:00  WARN 12500 --- [todolist] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController': Unsatisfied dependency expressed through field 'authService': Error creating bean with name 'authService': Unsatisfied dependency expressed through field 'passwordEncoder': No qualifying bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2025-01-07T15:48:56.257+07:00  INFO 12500 --- [todolist] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-07T15:48:56.259+07:00  INFO 12500 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-07T15:48:56.263+07:00  INFO 12500 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-07T15:48:56.266+07:00  INFO 12500 --- [todolist] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-01-07T15:48:56.276+07:00  INFO 12500 --- [todolist] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-01-07T15:48:56.294+07:00 ERROR 12500 --- [todolist] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field passwordEncoder in com.takehometest.todolist.service.AuthService required a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' in your configuration.
+
+2025-01-07T15:50:04.147+07:00  INFO 14200 --- [todolist] [main] c.t.todolist.TodolistApplication         : Starting TodolistApplication using Java 21.0.5 with PID 14200 (D:\Koding\Worksheet\todolist\target\classes started by rezza in D:\Koding\Worksheet\todolist)
+2025-01-07T15:50:04.149+07:00  INFO 14200 --- [todolist] [main] c.t.todolist.TodolistApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-01-07T15:50:04.724+07:00  INFO 14200 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-07T15:50:04.781+07:00  INFO 14200 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 46 ms. Found 1 JPA repository interface.
+2025-01-07T15:50:05.207+07:00  INFO 14200 --- [todolist] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-07T15:50:05.221+07:00  INFO 14200 --- [todolist] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-07T15:50:05.221+07:00  INFO 14200 --- [todolist] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-01-07T15:50:05.261+07:00  INFO 14200 --- [todolist] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-07T15:50:05.261+07:00  INFO 14200 --- [todolist] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1072 ms
+2025-01-07T15:50:05.396+07:00  INFO 14200 --- [todolist] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-07T15:50:05.439+07:00  INFO 14200 --- [todolist] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-01-07T15:50:05.463+07:00  INFO 14200 --- [todolist] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-07T15:50:05.666+07:00  INFO 14200 --- [todolist] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-07T15:50:05.688+07:00  INFO 14200 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-07T15:50:05.825+07:00  INFO 14200 --- [todolist] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@1b47b7f5
+2025-01-07T15:50:05.826+07:00  INFO 14200 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-07T15:50:05.857+07:00  WARN 14200 --- [todolist] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-07T15:50:05.871+07:00  INFO 14200 --- [todolist] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-07T15:50:06.454+07:00  INFO 14200 --- [todolist] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-07T15:50:06.495+07:00  INFO 14200 --- [todolist] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-07T15:50:06.750+07:00  WARN 14200 --- [todolist] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController': Unsatisfied dependency expressed through field 'authService': Error creating bean with name 'authService': Unsatisfied dependency expressed through field 'passwordEncoder': No qualifying bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2025-01-07T15:50:06.751+07:00  INFO 14200 --- [todolist] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-07T15:50:06.753+07:00  INFO 14200 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-07T15:50:06.757+07:00  INFO 14200 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-07T15:50:06.760+07:00  INFO 14200 --- [todolist] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-01-07T15:50:06.769+07:00  INFO 14200 --- [todolist] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-01-07T15:50:06.787+07:00 ERROR 14200 --- [todolist] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field passwordEncoder in com.takehometest.todolist.service.AuthService required a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' in your configuration.
+
+2025-01-07T15:50:25.191+07:00  INFO 14968 --- [todolist] [main] c.t.todolist.TodolistApplication         : Starting TodolistApplication using Java 21.0.5 with PID 14968 (D:\Koding\Worksheet\todolist\target\classes started by rezza in D:\Koding\Worksheet\todolist)
+2025-01-07T15:50:25.193+07:00  INFO 14968 --- [todolist] [main] c.t.todolist.TodolistApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-01-07T15:50:25.804+07:00  INFO 14968 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-07T15:50:25.881+07:00  INFO 14968 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 64 ms. Found 1 JPA repository interface.
+2025-01-07T15:50:26.340+07:00  INFO 14968 --- [todolist] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-07T15:50:26.352+07:00  INFO 14968 --- [todolist] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-07T15:50:26.352+07:00  INFO 14968 --- [todolist] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-01-07T15:50:26.395+07:00  INFO 14968 --- [todolist] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-07T15:50:26.395+07:00  INFO 14968 --- [todolist] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1161 ms
+2025-01-07T15:50:26.518+07:00  INFO 14968 --- [todolist] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-07T15:50:26.560+07:00  INFO 14968 --- [todolist] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-01-07T15:50:26.584+07:00  INFO 14968 --- [todolist] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-07T15:50:26.824+07:00  INFO 14968 --- [todolist] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-07T15:50:26.847+07:00  INFO 14968 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-07T15:50:26.995+07:00  INFO 14968 --- [todolist] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6d815fb7
+2025-01-07T15:50:26.997+07:00  INFO 14968 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-07T15:50:27.033+07:00  WARN 14968 --- [todolist] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-07T15:50:27.051+07:00  INFO 14968 --- [todolist] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-07T15:50:27.657+07:00  INFO 14968 --- [todolist] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-07T15:50:27.697+07:00  INFO 14968 --- [todolist] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-07T15:50:27.991+07:00  WARN 14968 --- [todolist] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController': Unsatisfied dependency expressed through field 'authService': Error creating bean with name 'authService': Unsatisfied dependency expressed through field 'passwordEncoder': No qualifying bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2025-01-07T15:50:27.991+07:00  INFO 14968 --- [todolist] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-07T15:50:27.994+07:00  INFO 14968 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-07T15:50:27.999+07:00  INFO 14968 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-07T15:50:28.001+07:00  INFO 14968 --- [todolist] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-01-07T15:50:28.009+07:00  INFO 14968 --- [todolist] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-01-07T15:50:28.027+07:00 ERROR 14968 --- [todolist] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field passwordEncoder in com.takehometest.todolist.service.AuthService required a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' in your configuration.
+
+2025-01-07T15:51:14.918+07:00  INFO 2080 --- [todolist] [main] c.t.todolist.TodolistApplication         : Starting TodolistApplication using Java 21.0.5 with PID 2080 (D:\Koding\Worksheet\todolist\target\classes started by rezza in D:\Koding\Worksheet\todolist)
+2025-01-07T15:51:14.920+07:00  INFO 2080 --- [todolist] [main] c.t.todolist.TodolistApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-01-07T15:51:15.468+07:00  INFO 2080 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-07T15:51:15.520+07:00  INFO 2080 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 1 JPA repository interface.
+2025-01-07T15:51:15.958+07:00  INFO 2080 --- [todolist] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-07T15:51:15.970+07:00  INFO 2080 --- [todolist] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-07T15:51:15.970+07:00  INFO 2080 --- [todolist] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-01-07T15:51:16.007+07:00  INFO 2080 --- [todolist] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-07T15:51:16.008+07:00  INFO 2080 --- [todolist] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1049 ms
+2025-01-07T15:51:16.130+07:00  INFO 2080 --- [todolist] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-07T15:51:16.171+07:00  INFO 2080 --- [todolist] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-01-07T15:51:16.196+07:00  INFO 2080 --- [todolist] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-07T15:51:16.428+07:00  INFO 2080 --- [todolist] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-07T15:51:16.457+07:00  INFO 2080 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-07T15:51:16.604+07:00  INFO 2080 --- [todolist] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@8432469
+2025-01-07T15:51:16.605+07:00  INFO 2080 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-07T15:51:16.637+07:00  WARN 2080 --- [todolist] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-07T15:51:16.658+07:00  INFO 2080 --- [todolist] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-07T15:51:17.291+07:00  INFO 2080 --- [todolist] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-07T15:51:17.331+07:00  INFO 2080 --- [todolist] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-07T15:51:17.571+07:00  WARN 2080 --- [todolist] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController': Unsatisfied dependency expressed through field 'authService': Error creating bean with name 'authService': Unsatisfied dependency expressed through field 'passwordEncoder': No qualifying bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2025-01-07T15:51:17.572+07:00  INFO 2080 --- [todolist] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-07T15:51:17.574+07:00  INFO 2080 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-07T15:51:17.577+07:00  INFO 2080 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-07T15:51:17.581+07:00  INFO 2080 --- [todolist] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-01-07T15:51:17.589+07:00  INFO 2080 --- [todolist] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-01-07T15:51:17.608+07:00 ERROR 2080 --- [todolist] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field passwordEncoder in com.takehometest.todolist.service.AuthService required a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' in your configuration.
+
+2025-01-07T15:51:55.507+07:00  INFO 7284 --- [todolist] [main] c.t.todolist.TodolistApplication         : Starting TodolistApplication using Java 21.0.5 with PID 7284 (D:\Koding\Worksheet\todolist\target\classes started by rezza in D:\Koding\Worksheet\todolist)
+2025-01-07T15:51:55.509+07:00  INFO 7284 --- [todolist] [main] c.t.todolist.TodolistApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-01-07T15:51:56.129+07:00  INFO 7284 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-07T15:51:56.183+07:00  INFO 7284 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 1 JPA repository interface.
+2025-01-07T15:51:56.642+07:00  INFO 7284 --- [todolist] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-07T15:51:56.653+07:00  INFO 7284 --- [todolist] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-07T15:51:56.653+07:00  INFO 7284 --- [todolist] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-01-07T15:51:56.692+07:00  INFO 7284 --- [todolist] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-07T15:51:56.693+07:00  INFO 7284 --- [todolist] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1125 ms
+2025-01-07T15:51:56.818+07:00  INFO 7284 --- [todolist] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-07T15:51:56.859+07:00  INFO 7284 --- [todolist] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-01-07T15:51:56.883+07:00  INFO 7284 --- [todolist] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-07T15:51:57.088+07:00  INFO 7284 --- [todolist] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-07T15:51:57.112+07:00  INFO 7284 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-07T15:51:57.246+07:00  INFO 7284 --- [todolist] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@d504137
+2025-01-07T15:51:57.247+07:00  INFO 7284 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-07T15:51:57.275+07:00  WARN 7284 --- [todolist] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-07T15:51:57.289+07:00  INFO 7284 --- [todolist] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-07T15:51:57.897+07:00  INFO 7284 --- [todolist] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-07T15:51:57.937+07:00  INFO 7284 --- [todolist] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-07T15:51:58.255+07:00  WARN 7284 --- [todolist] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController': Unsatisfied dependency expressed through field 'authService': Error creating bean with name 'authService': Unsatisfied dependency expressed through field 'passwordEncoder': No qualifying bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2025-01-07T15:51:58.255+07:00  INFO 7284 --- [todolist] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-07T15:51:58.257+07:00  INFO 7284 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-07T15:51:58.263+07:00  INFO 7284 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-07T15:51:58.265+07:00  INFO 7284 --- [todolist] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-01-07T15:51:58.277+07:00  INFO 7284 --- [todolist] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-01-07T15:51:58.299+07:00 ERROR 7284 --- [todolist] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field passwordEncoder in com.takehometest.todolist.service.AuthService required a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' in your configuration.
+
+2025-01-07T15:52:08.419+07:00  INFO 16480 --- [todolist] [main] c.t.todolist.TodolistApplication         : Starting TodolistApplication using Java 21.0.5 with PID 16480 (D:\Koding\Worksheet\todolist\target\classes started by rezza in D:\Koding\Worksheet\todolist)
+2025-01-07T15:52:08.421+07:00  INFO 16480 --- [todolist] [main] c.t.todolist.TodolistApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-01-07T15:52:09.002+07:00  INFO 16480 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-07T15:52:09.052+07:00  INFO 16480 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 1 JPA repository interface.
+2025-01-07T15:52:09.491+07:00  INFO 16480 --- [todolist] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-07T15:52:09.502+07:00  INFO 16480 --- [todolist] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-07T15:52:09.502+07:00  INFO 16480 --- [todolist] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-01-07T15:52:09.542+07:00  INFO 16480 --- [todolist] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-07T15:52:09.542+07:00  INFO 16480 --- [todolist] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1072 ms
+2025-01-07T15:52:09.675+07:00  INFO 16480 --- [todolist] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-07T15:52:09.726+07:00  INFO 16480 --- [todolist] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-01-07T15:52:09.753+07:00  INFO 16480 --- [todolist] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-07T15:52:09.976+07:00  INFO 16480 --- [todolist] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-07T15:52:09.998+07:00  INFO 16480 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-07T15:52:10.154+07:00  INFO 16480 --- [todolist] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@54be6213
+2025-01-07T15:52:10.156+07:00  INFO 16480 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-07T15:52:10.188+07:00  WARN 16480 --- [todolist] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-07T15:52:10.211+07:00  INFO 16480 --- [todolist] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-07T15:52:10.814+07:00  INFO 16480 --- [todolist] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-07T15:52:10.849+07:00  INFO 16480 --- [todolist] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-07T15:52:10.873+07:00  WARN 16480 --- [todolist] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'securityConfig': Requested bean is currently in creation: Is there an unresolvable circular reference or an asynchronous initialization dependency?
+2025-01-07T15:52:10.873+07:00  INFO 16480 --- [todolist] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-07T15:52:10.876+07:00  INFO 16480 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-07T15:52:10.961+07:00  INFO 16480 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-07T15:52:10.963+07:00  INFO 16480 --- [todolist] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-01-07T15:52:10.971+07:00  INFO 16480 --- [todolist] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-01-07T15:52:10.988+07:00 ERROR 16480 --- [todolist] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'securityConfig': Requested bean is currently in creation: Is there an unresolvable circular reference or an asynchronous initialization dependency?
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.beforeSingletonCreation(DefaultSingletonBeanRegistry.java:421) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:282) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansWithAnnotation(DefaultListableBeanFactory.java:743) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.AbstractApplicationContext.getBeansWithAnnotation(AbstractApplicationContext.java:1440) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration$EnableGlobalAuthenticationAutowiredConfigurer.init(AuthenticationConfiguration.java:213) ~[spring-security-config-6.4.2.jar:6.4.2]
+	at org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration$EnableGlobalAuthenticationAutowiredConfigurer.init(AuthenticationConfiguration.java:200) ~[spring-security-config-6.4.2.jar:6.4.2]
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.init(AbstractConfiguredSecurityBuilder.java:387) ~[spring-security-config-6.4.2.jar:6.4.2]
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.doBuild(AbstractConfiguredSecurityBuilder.java:349) ~[spring-security-config-6.4.2.jar:6.4.2]
+	at org.springframework.security.config.annotation.AbstractSecurityBuilder.build(AbstractSecurityBuilder.java:38) ~[spring-security-config-6.4.2.jar:6.4.2]
+	at org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration.getAuthenticationManager(AuthenticationConfiguration.java:121) ~[spring-security-config-6.4.2.jar:6.4.2]
+	at com.takehometest.todolist.config.SecurityConfig.authenticationManager(SecurityConfig.java:23) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:854) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1441) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.1.jar:3.4.1]
+	at com.takehometest.todolist.TodolistApplication.main(TodolistApplication.java:12) ~[classes/:na]
+
+2025-01-07T15:53:55.343+07:00  INFO 4668 --- [todolist] [main] c.t.todolist.TodolistApplication         : Starting TodolistApplication using Java 21.0.5 with PID 4668 (D:\Koding\Worksheet\todolist\target\classes started by rezza in D:\Koding\Worksheet\todolist)
+2025-01-07T15:53:55.345+07:00  INFO 4668 --- [todolist] [main] c.t.todolist.TodolistApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-01-07T15:53:55.915+07:00  INFO 4668 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-07T15:53:55.963+07:00  INFO 4668 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 1 JPA repository interface.
+2025-01-07T15:53:56.414+07:00  INFO 4668 --- [todolist] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-07T15:53:56.424+07:00  INFO 4668 --- [todolist] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-07T15:53:56.425+07:00  INFO 4668 --- [todolist] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-01-07T15:53:56.463+07:00  INFO 4668 --- [todolist] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-07T15:53:56.463+07:00  INFO 4668 --- [todolist] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1075 ms
+2025-01-07T15:53:56.596+07:00  INFO 4668 --- [todolist] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-07T15:53:56.639+07:00  INFO 4668 --- [todolist] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-01-07T15:53:56.665+07:00  INFO 4668 --- [todolist] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-07T15:53:56.877+07:00  INFO 4668 --- [todolist] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-07T15:53:56.898+07:00  INFO 4668 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-07T15:53:57.032+07:00  INFO 4668 --- [todolist] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@7e050be1
+2025-01-07T15:53:57.034+07:00  INFO 4668 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-07T15:53:57.062+07:00  WARN 4668 --- [todolist] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-07T15:53:57.076+07:00  INFO 4668 --- [todolist] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-07T15:53:57.661+07:00  INFO 4668 --- [todolist] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-07T15:53:57.698+07:00  INFO 4668 --- [todolist] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-07T15:53:57.724+07:00  WARN 4668 --- [todolist] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'securityConfig': Requested bean is currently in creation: Is there an unresolvable circular reference or an asynchronous initialization dependency?
+2025-01-07T15:53:57.724+07:00  INFO 4668 --- [todolist] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-07T15:53:57.728+07:00  INFO 4668 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-07T15:53:57.754+07:00  INFO 4668 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-07T15:53:57.756+07:00  INFO 4668 --- [todolist] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-01-07T15:53:57.768+07:00  INFO 4668 --- [todolist] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-01-07T15:53:57.784+07:00 ERROR 4668 --- [todolist] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'securityConfig': Requested bean is currently in creation: Is there an unresolvable circular reference or an asynchronous initialization dependency?
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.beforeSingletonCreation(DefaultSingletonBeanRegistry.java:421) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:282) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansWithAnnotation(DefaultListableBeanFactory.java:743) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.AbstractApplicationContext.getBeansWithAnnotation(AbstractApplicationContext.java:1440) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration$EnableGlobalAuthenticationAutowiredConfigurer.init(AuthenticationConfiguration.java:213) ~[spring-security-config-6.4.2.jar:6.4.2]
+	at org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration$EnableGlobalAuthenticationAutowiredConfigurer.init(AuthenticationConfiguration.java:200) ~[spring-security-config-6.4.2.jar:6.4.2]
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.init(AbstractConfiguredSecurityBuilder.java:387) ~[spring-security-config-6.4.2.jar:6.4.2]
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.doBuild(AbstractConfiguredSecurityBuilder.java:349) ~[spring-security-config-6.4.2.jar:6.4.2]
+	at org.springframework.security.config.annotation.AbstractSecurityBuilder.build(AbstractSecurityBuilder.java:38) ~[spring-security-config-6.4.2.jar:6.4.2]
+	at org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration.getAuthenticationManager(AuthenticationConfiguration.java:121) ~[spring-security-config-6.4.2.jar:6.4.2]
+	at com.takehometest.todolist.config.SecurityConfig.authenticationManager(SecurityConfig.java:23) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:854) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1441) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.1.jar:3.4.1]
+	at com.takehometest.todolist.TodolistApplication.main(TodolistApplication.java:12) ~[classes/:na]
+
+2025-01-07T15:55:43.985+07:00  INFO 3032 --- [todolist] [main] c.t.todolist.TodolistApplication         : Starting TodolistApplication using Java 21.0.5 with PID 3032 (D:\Koding\Worksheet\todolist\target\classes started by rezza in D:\Koding\Worksheet\todolist)
+2025-01-07T15:55:43.987+07:00  INFO 3032 --- [todolist] [main] c.t.todolist.TodolistApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-01-07T15:55:44.581+07:00  INFO 3032 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-07T15:55:44.639+07:00  INFO 3032 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 48 ms. Found 1 JPA repository interface.
+2025-01-07T15:55:45.088+07:00  INFO 3032 --- [todolist] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-07T15:55:45.099+07:00  INFO 3032 --- [todolist] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-07T15:55:45.099+07:00  INFO 3032 --- [todolist] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-01-07T15:55:45.139+07:00  INFO 3032 --- [todolist] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-07T15:55:45.139+07:00  INFO 3032 --- [todolist] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1107 ms
+2025-01-07T15:55:45.262+07:00  INFO 3032 --- [todolist] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-07T15:55:45.306+07:00  INFO 3032 --- [todolist] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-01-07T15:55:45.333+07:00  INFO 3032 --- [todolist] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-07T15:55:45.551+07:00  INFO 3032 --- [todolist] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-07T15:55:45.573+07:00  INFO 3032 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-07T15:55:45.824+07:00  INFO 3032 --- [todolist] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@2a6fb62f
+2025-01-07T15:55:45.825+07:00  INFO 3032 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-07T15:55:45.851+07:00  WARN 3032 --- [todolist] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-07T15:55:45.865+07:00  INFO 3032 --- [todolist] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-07T15:55:46.435+07:00  INFO 3032 --- [todolist] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-07T15:55:46.471+07:00  INFO 3032 --- [todolist] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-07T15:55:46.494+07:00  WARN 3032 --- [todolist] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'securityConfig': Requested bean is currently in creation: Is there an unresolvable circular reference or an asynchronous initialization dependency?
+2025-01-07T15:55:46.494+07:00  INFO 3032 --- [todolist] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-07T15:55:46.497+07:00  INFO 3032 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-07T15:55:46.556+07:00  INFO 3032 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-07T15:55:46.557+07:00  INFO 3032 --- [todolist] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-01-07T15:55:46.566+07:00  INFO 3032 --- [todolist] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-01-07T15:55:46.580+07:00 ERROR 3032 --- [todolist] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'securityConfig': Requested bean is currently in creation: Is there an unresolvable circular reference or an asynchronous initialization dependency?
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.beforeSingletonCreation(DefaultSingletonBeanRegistry.java:421) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:282) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansWithAnnotation(DefaultListableBeanFactory.java:743) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.AbstractApplicationContext.getBeansWithAnnotation(AbstractApplicationContext.java:1440) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration$EnableGlobalAuthenticationAutowiredConfigurer.init(AuthenticationConfiguration.java:213) ~[spring-security-config-6.4.2.jar:6.4.2]
+	at org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration$EnableGlobalAuthenticationAutowiredConfigurer.init(AuthenticationConfiguration.java:200) ~[spring-security-config-6.4.2.jar:6.4.2]
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.init(AbstractConfiguredSecurityBuilder.java:387) ~[spring-security-config-6.4.2.jar:6.4.2]
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.doBuild(AbstractConfiguredSecurityBuilder.java:349) ~[spring-security-config-6.4.2.jar:6.4.2]
+	at org.springframework.security.config.annotation.AbstractSecurityBuilder.build(AbstractSecurityBuilder.java:38) ~[spring-security-config-6.4.2.jar:6.4.2]
+	at org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration.getAuthenticationManager(AuthenticationConfiguration.java:121) ~[spring-security-config-6.4.2.jar:6.4.2]
+	at com.takehometest.todolist.config.SecurityConfig.authenticationManager(SecurityConfig.java:23) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:854) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1441) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.1.jar:3.4.1]
+	at com.takehometest.todolist.TodolistApplication.main(TodolistApplication.java:12) ~[classes/:na]
+
+2025-01-07T15:56:25.982+07:00  INFO 3256 --- [todolist] [main] c.t.todolist.TodolistApplication         : Starting TodolistApplication using Java 21.0.5 with PID 3256 (D:\Koding\Worksheet\todolist\target\classes started by rezza in D:\Koding\Worksheet\todolist)
+2025-01-07T15:56:25.985+07:00  INFO 3256 --- [todolist] [main] c.t.todolist.TodolistApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-01-07T15:56:26.586+07:00  INFO 3256 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-07T15:56:26.635+07:00  INFO 3256 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 1 JPA repository interface.
+2025-01-07T15:56:27.119+07:00  INFO 3256 --- [todolist] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-07T15:56:27.132+07:00  INFO 3256 --- [todolist] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-07T15:56:27.133+07:00  INFO 3256 --- [todolist] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-01-07T15:56:27.178+07:00  INFO 3256 --- [todolist] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-07T15:56:27.178+07:00  INFO 3256 --- [todolist] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1147 ms
+2025-01-07T15:56:27.319+07:00  INFO 3256 --- [todolist] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-07T15:56:27.359+07:00  INFO 3256 --- [todolist] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-01-07T15:56:27.385+07:00  INFO 3256 --- [todolist] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-07T15:56:27.581+07:00  INFO 3256 --- [todolist] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-07T15:56:27.605+07:00  INFO 3256 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-07T15:56:27.751+07:00  INFO 3256 --- [todolist] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@4b5ad306
+2025-01-07T15:56:27.753+07:00  INFO 3256 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-07T15:56:27.782+07:00  WARN 3256 --- [todolist] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-07T15:56:27.804+07:00  INFO 3256 --- [todolist] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-07T15:56:28.393+07:00  INFO 3256 --- [todolist] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-07T15:56:28.435+07:00  INFO 3256 --- [todolist] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-07T15:56:28.684+07:00  WARN 3256 --- [todolist] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'authController': Unsatisfied dependency expressed through field 'authService': Error creating bean with name 'authService': Unsatisfied dependency expressed through field 'passwordEncoder': No qualifying bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2025-01-07T15:56:28.684+07:00  INFO 3256 --- [todolist] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-07T15:56:28.686+07:00  INFO 3256 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-07T15:56:28.691+07:00  INFO 3256 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-07T15:56:28.692+07:00  INFO 3256 --- [todolist] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-01-07T15:56:28.701+07:00  INFO 3256 --- [todolist] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-01-07T15:56:28.719+07:00 ERROR 3256 --- [todolist] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field passwordEncoder in com.takehometest.todolist.service.AuthService required a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder' in your configuration.
+
+2025-01-07T15:56:37.418+07:00  INFO 7484 --- [todolist] [main] c.t.todolist.TodolistApplication         : Starting TodolistApplication using Java 21.0.5 with PID 7484 (D:\Koding\Worksheet\todolist\target\classes started by rezza in D:\Koding\Worksheet\todolist)
+2025-01-07T15:56:37.420+07:00  INFO 7484 --- [todolist] [main] c.t.todolist.TodolistApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-01-07T15:56:38.090+07:00  INFO 7484 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-07T15:56:38.140+07:00  INFO 7484 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 1 JPA repository interface.
+2025-01-07T15:56:38.587+07:00  INFO 7484 --- [todolist] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-07T15:56:38.599+07:00  INFO 7484 --- [todolist] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-07T15:56:38.599+07:00  INFO 7484 --- [todolist] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-01-07T15:56:38.644+07:00  INFO 7484 --- [todolist] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-07T15:56:38.644+07:00  INFO 7484 --- [todolist] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1175 ms
+2025-01-07T15:56:38.845+07:00  INFO 7484 --- [todolist] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-07T15:56:38.887+07:00  INFO 7484 --- [todolist] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-01-07T15:56:38.914+07:00  INFO 7484 --- [todolist] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-07T15:56:39.119+07:00  INFO 7484 --- [todolist] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-07T15:56:39.139+07:00  INFO 7484 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-07T15:56:39.431+07:00  INFO 7484 --- [todolist] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@506aa618
+2025-01-07T15:56:39.432+07:00  INFO 7484 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-07T15:56:39.464+07:00  WARN 7484 --- [todolist] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-07T15:56:39.477+07:00  INFO 7484 --- [todolist] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-07T15:56:40.139+07:00  INFO 7484 --- [todolist] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-07T15:56:40.182+07:00  INFO 7484 --- [todolist] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-07T15:56:40.209+07:00  WARN 7484 --- [todolist] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'securityConfig': Requested bean is currently in creation: Is there an unresolvable circular reference or an asynchronous initialization dependency?
+2025-01-07T15:56:40.209+07:00  INFO 7484 --- [todolist] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-07T15:56:40.211+07:00  INFO 7484 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-07T15:56:40.228+07:00  INFO 7484 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-07T15:56:40.229+07:00  INFO 7484 --- [todolist] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-01-07T15:56:40.239+07:00  INFO 7484 --- [todolist] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-01-07T15:56:40.252+07:00 ERROR 7484 --- [todolist] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCurrentlyInCreationException: Error creating bean with name 'securityConfig': Requested bean is currently in creation: Is there an unresolvable circular reference or an asynchronous initialization dependency?
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.beforeSingletonCreation(DefaultSingletonBeanRegistry.java:421) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:282) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBeansWithAnnotation(DefaultListableBeanFactory.java:743) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.AbstractApplicationContext.getBeansWithAnnotation(AbstractApplicationContext.java:1440) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration$EnableGlobalAuthenticationAutowiredConfigurer.init(AuthenticationConfiguration.java:213) ~[spring-security-config-6.4.2.jar:6.4.2]
+	at org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration$EnableGlobalAuthenticationAutowiredConfigurer.init(AuthenticationConfiguration.java:200) ~[spring-security-config-6.4.2.jar:6.4.2]
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.init(AbstractConfiguredSecurityBuilder.java:387) ~[spring-security-config-6.4.2.jar:6.4.2]
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.doBuild(AbstractConfiguredSecurityBuilder.java:349) ~[spring-security-config-6.4.2.jar:6.4.2]
+	at org.springframework.security.config.annotation.AbstractSecurityBuilder.build(AbstractSecurityBuilder.java:38) ~[spring-security-config-6.4.2.jar:6.4.2]
+	at org.springframework.security.config.annotation.authentication.configuration.AuthenticationConfiguration.getAuthenticationManager(AuthenticationConfiguration.java:121) ~[spring-security-config-6.4.2.jar:6.4.2]
+	at com.takehometest.todolist.config.SecurityConfig.authenticationManager(SecurityConfig.java:23) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:854) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:146) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:509) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1441) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:523) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:336) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:289) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:334) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1122) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1093) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1030) ~[spring-beans-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.1.jar:6.2.1]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.1.jar:3.4.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.1.jar:3.4.1]
+	at com.takehometest.todolist.TodolistApplication.main(TodolistApplication.java:12) ~[classes/:na]
+
+2025-01-07T15:57:42.042+07:00  INFO 12468 --- [todolist] [main] c.t.todolist.TodolistApplication         : Starting TodolistApplication using Java 21.0.5 with PID 12468 (D:\Koding\Worksheet\todolist\target\classes started by rezza in D:\Koding\Worksheet\todolist)
+2025-01-07T15:57:42.044+07:00  INFO 12468 --- [todolist] [main] c.t.todolist.TodolistApplication         : No active profile set, falling back to 1 default profile: "default"
+2025-01-07T15:57:42.605+07:00  INFO 12468 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-07T15:57:42.666+07:00  INFO 12468 --- [todolist] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 53 ms. Found 1 JPA repository interface.
+2025-01-07T15:57:43.140+07:00  INFO 12468 --- [todolist] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-07T15:57:43.154+07:00  INFO 12468 --- [todolist] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-07T15:57:43.155+07:00  INFO 12468 --- [todolist] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-01-07T15:57:43.202+07:00  INFO 12468 --- [todolist] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-07T15:57:43.203+07:00  INFO 12468 --- [todolist] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1118 ms
+2025-01-07T15:57:43.340+07:00  INFO 12468 --- [todolist] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-07T15:57:43.388+07:00  INFO 12468 --- [todolist] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-01-07T15:57:43.412+07:00  INFO 12468 --- [todolist] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-07T15:57:43.642+07:00  INFO 12468 --- [todolist] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-07T15:57:43.668+07:00  INFO 12468 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-07T15:57:43.793+07:00  INFO 12468 --- [todolist] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3b57f915
+2025-01-07T15:57:43.795+07:00  INFO 12468 --- [todolist] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-07T15:57:43.820+07:00  WARN 12468 --- [todolist] [main] org.hibernate.orm.deprecation            : HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-07T15:57:43.836+07:00  INFO 12468 --- [todolist] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 17.2
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-07T15:57:44.477+07:00  INFO 12468 --- [todolist] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-07T15:57:44.522+07:00  INFO 12468 --- [todolist] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-07T15:57:44.824+07:00  WARN 12468 --- [todolist] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-07T15:57:45.120+07:00  WARN 12468 --- [todolist] [main] .s.s.UserDetailsServiceAutoConfiguration : 
+
+Using generated security password: 63565986-c557-4125-84d1-8de6b32b27ff
+
+This generated password is for development use only. Your security configuration must be updated before running your application in production.
+
+2025-01-07T15:57:45.125+07:00  INFO 12468 --- [todolist] [main] r$InitializeUserDetailsManagerConfigurer : Global AuthenticationManager configured with UserDetailsService bean with name inMemoryUserDetailsManager
+2025-01-07T15:57:45.265+07:00  INFO 12468 --- [todolist] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-01-07T15:57:45.275+07:00  INFO 12468 --- [todolist] [main] c.t.todolist.TodolistApplication         : Started TodolistApplication in 3.639 seconds (process running for 3.99)
+2025-01-07T16:00:30.471+07:00  INFO 12468 --- [todolist] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-07T16:00:30.472+07:00  INFO 12468 --- [todolist] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-07T16:00:30.475+07:00  INFO 12468 --- [todolist] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-01-07T16:34:01.826+07:00  INFO 12468 --- [todolist] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-07T16:34:01.840+07:00  INFO 12468 --- [todolist] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-01-07T16:34:01.843+07:00  INFO 12468 --- [todolist] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-07T16:34:01.844+07:00  INFO 12468 --- [todolist] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-07T16:34:01.848+07:00  INFO 12468 --- [todolist] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
